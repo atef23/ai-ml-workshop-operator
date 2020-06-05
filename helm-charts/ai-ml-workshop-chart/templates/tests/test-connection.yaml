@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "ai-ml-workshop-chart.fullname" . }}-test-connection"
+  labels:
+    {{- include "ai-ml-workshop-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "ai-ml-workshop-chart.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

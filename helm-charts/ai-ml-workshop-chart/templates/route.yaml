@@ -1,0 +1,12 @@
+{{- $fullName := include "ai-ml-workshop-chart.fullname" . -}}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: {{ $fullName }}
+  name: {{ $fullName }}
+spec:
+  path: /
+  to:
+    kind: Service
+    name: {{ $fullName }}
