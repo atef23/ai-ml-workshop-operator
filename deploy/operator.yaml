@@ -16,7 +16,7 @@ spec:
       containers:
         - name: ai-ml-workshop-operator
           # Replace this with the built image name
-          image: quay.io/aaziz/ai-ml-workshop-operator:v0.0.1
+          image: quay.io/aaziz/ai-ml-workshop-operator:v0.0.2
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE

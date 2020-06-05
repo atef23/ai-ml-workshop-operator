@@ -4,7 +4,7 @@ metadata:
   name: example-aimlworkshopchart
 spec:
   # Default values copied from <project_dir>/helm-charts/ai-ml-workshop-chart/values.yaml
-  
+
   affinity: {}
   autoscaling:
     enabled: false
@@ -39,4 +39,3 @@ spec:
     create: true
     name: ""
   tolerations: []
-  

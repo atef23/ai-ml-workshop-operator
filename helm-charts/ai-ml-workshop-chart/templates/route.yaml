@@ -2,9 +2,10 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
+  name: ai-ml
   labels:
-    app: {{ $fullName }}
-  name: {{ $fullName }}
+    app: ai-ml
+    name: ai-ml
 spec:
   path: /
   to:
